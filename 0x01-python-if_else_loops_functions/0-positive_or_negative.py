@@ -9,5 +9,3 @@ number = random.randint(-10, 10)
 
     else
     print(f"{number:d} is negative")
-    
-    return(number)
