@@ -1,4 +1,4 @@
-#!/usr/bin/puthon3
+#!/usr/bin/python3
 uppercase = _import_('8-uppercase').uppercase
 
 uppercase("best")
