@@ -1,1 +1,1 @@
-This directory contains python files on import and modules
+This directory contains python files on import and module
