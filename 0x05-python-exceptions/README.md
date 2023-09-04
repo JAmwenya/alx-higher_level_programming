@@ -1,1 +1,0 @@
-this directory contains python files on exceptions
