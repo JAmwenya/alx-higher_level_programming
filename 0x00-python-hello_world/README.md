@@ -21,3 +21,9 @@
 9. Easter Egg - Write a Python script that prints "The Zen of Python", by TimPeters, followed by a new line.
 
 10. Linked list cycle - technical interview preparation question in C language
+
+11. Hello, write - script that prints to the standard error stream
+
+12. Compile - a script that compiles a Python script file
+
+13. ByteCode -> Python #1 - python function that disassembles functions
