@@ -26,4 +26,4 @@
 
 12. Compile - a script that compiles a Python script file
 
-13. ByteCode -> Python #1 - python function that disassembles functions
+13. ByteCode -> Python #1 - write a python function that when disassembled results to 98 as a constant,a & b as variables, has a power and an add operator and a return value
