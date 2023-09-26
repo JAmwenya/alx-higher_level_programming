@@ -12,10 +12,13 @@ class Square:
             size (int): The size of the new square.
         '''
 
-    try: (type(size) = int) 
+    try: 
+        type(size) = int
     except: TypeError:
-    print('size must be an integer')
+        print('size must be an integer')
+        break
 
-    try: (self.__size < 0) 
+    try:
+        self.__size < 0 
     except: ValueError:
-    print('size must be >= 0')
+        print('size must be >= 0')
