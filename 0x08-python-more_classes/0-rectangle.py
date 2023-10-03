@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-
-"""Define a class Rectangle."""
-
 class Rectangle:
 
-    """Does not take any arguments"""
+    """A class that represents a rectangle"""
     
     pass
