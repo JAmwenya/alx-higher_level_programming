@@ -3,5 +3,5 @@
 """Define a class Rectangle."""
 
 class Rectangle:
-    """Represent a Rectangle."""
+    """Does not take any arguments"""
     pass
