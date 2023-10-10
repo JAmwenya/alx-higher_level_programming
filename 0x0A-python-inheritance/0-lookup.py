@@ -6,7 +6,7 @@
 
 def lookup(obj):
         """
-        Function that searches for and lists available attributes and methods of an object.
+        A function that returns the list of available attributes and methods of an object.
 
         Args:
         obj: The object to be inspected.
