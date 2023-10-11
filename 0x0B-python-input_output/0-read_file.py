@@ -8,13 +8,7 @@ def read_file(filename=""):
 
     Returns:
         None
-
-    Raises:
-        FileNotFoundError: If the specified file is not found.
     """
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            for line in file:
-                print(line, end='')
-    except FileNotFoundError:
-        print(f"the file '{filename}' was not found.")
+    with open(filename, 'r', encoding='utf-8') as file:
+        for line in file:
+            print(line, end='')
