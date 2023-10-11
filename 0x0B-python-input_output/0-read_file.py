@@ -8,9 +8,6 @@ def read_file(filename=""):
 
     Args:
         filename (str): The name of the file to be read with a default of an empty string.
-
-    Returns:
-        None
     """
     with open(filename, encoding="utf-8") as file:
-            print(file.read(), end="")
+        print(file.read(), end="")
