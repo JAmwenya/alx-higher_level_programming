@@ -55,7 +55,7 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-	def __str__(self) -> str:
+    def __str__(self) -> str:
         """present a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -65,4 +65,4 @@ class Rectangle:
                 rectangle += "#"
             if column < self.__height - 1:
                 rectangle += "\n"
-	return (rectangle)
+                return (rectangle)
