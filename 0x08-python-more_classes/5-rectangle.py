@@ -46,17 +46,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """a method that returns the area of a rectangle"""
-        return self.__height * self.__width
+        """a method that returns the area of the rectangle"""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """a method that returns the perimeter of a rectangle"""
+        """a method that returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return (self.__height + self.__width) * 2
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self) -> str:
-        """present a diagram of the rectangle defined for an object"""
+        """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
         rectangle = ""
@@ -65,4 +65,12 @@ class Rectangle:
                 rectangle += "#"
             if column < self.__height - 1:
                 rectangle += "\n"
-                return (rectangle)
+        return (rectangle)
+
+    def __repr__(self):
+        """returns a string representation of the rectangle"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a message for every object that is deleted"""
+	print("Bye rectangle...")
