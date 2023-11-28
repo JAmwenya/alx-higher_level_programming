@@ -59,14 +59,14 @@ Adding a letter and a number (a = 'c' and b = 1)
               ...
     TypeError: a must be an integer
 
-Adding two letters (a = 'c' and b = 'm')
+Adding two letters (a = 'j' and b = 'n')
     >>> add_integer('c', 'm')
     Traceback (most recent call last):
               ...
     TypeError: a must be an integer
 
 Adding a tuple
-    >>> add_integer((1, 1))
+    >>> add_integer((1, 2))
     Traceback (most recent call last):
               ...
     TypeError: a must be an integer
@@ -77,15 +77,15 @@ Adding a number and a list
 	      ...
     TypeError: b must be an integer
 
-Passing a only one string
+Passing a string
     >>> add_integer("Hello")
     Traceback (most recent call last):
 	      ...
     TypeError: a must be an integer
 
-Adding two float numbers (a = 1.2 and b = 4.2)
-    >>> add_integer(1.2, 4.2)
-    5
+Adding two float numbers (a = 3.1 and b = 1.5)
+    >>> add_integer(3.1, 1.5)
+    4
 
 Case Overflow:
 
