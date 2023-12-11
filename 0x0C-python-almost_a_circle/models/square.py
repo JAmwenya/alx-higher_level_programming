@@ -22,7 +22,7 @@ class Square(Rectangle):
         """Get/set the size of the Square."""
         return self.width
 
-    @size.setter
+	@size.setter
     def size(self, value):
         self.width = value
         self.height = value
@@ -33,7 +33,7 @@ class Square(Rectangle):
         Args:
             *args (ints): New attribute values.
                 - 1st argument represents id attribute
-		- 2nd argument represents size attribute
+                - 2nd argument represents size attribute
                 - 3rd argument represents x attribute
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
@@ -45,7 +45,22 @@ class Square(Rectangle):
                     if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-             		self.id = v
+                        self.id = arg
+                elif a == 1:
+                    self.size = arg
+                elif a == 2:
+                    self.x = arg
+                elif a == 3:
+                    self.y = arg
+                a += 1
+
+		elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = v
                 elif k == "size":
                     self.size = v
                 elif k == "x":
@@ -65,4 +80,4 @@ class Square(Rectangle):
     def __str__(self):
         """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-						self.width)
+                                                 self.width)
