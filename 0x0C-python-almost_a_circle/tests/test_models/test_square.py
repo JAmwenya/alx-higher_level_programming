@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # test_square.py
+
 """Defines unittests for models/square.py.
 
 Unittest classes:
@@ -177,7 +178,32 @@ class TestSquare_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, 5.5)
 
-    def ger"):
+	 def test_complex_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, complex(5))
+
+	def test_dict_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, {"a": 1, "b": 2}, 2)
+
+	 def test_bool_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, True)
+
+	def test_list_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, [1, 2, 3])
+
+    def test_set_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, {1, 2, 3})
+
+	def test_tuple_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, (1, 2, 3))
+
+    def test_frozenset_x(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, frozenset({1, 2, 3, 1}))
 
     def test_range_x(self):
@@ -602,40 +628,14 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
     def test_update_kwargs_wrong_keys(self):
         s = Square(10, 10, 10, 10)
-        s.update(a=5, b=10)
-        self.assertEqual("[S:
-    unittest.main()test_complex_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, complex(5))
+		s.update(a=5, b=10)
+		self.assertEqual("[Square] (10) 10/10 - 10", str(s))
 
-    def test_dict_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, {"a": 1, "b": 2}, 2)
-
-    def test_bool_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, True)
-
-    def test_list_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, [1, 2, 3])
-
-    def test_set_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, {1, 2, 3})
-
-    def test_tuple_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, (1, 2, 3))
-
-    def test_frozenset_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an intequare] (10) 10/10 - 10", str(s))
-
-    def test_update_kwargs_some_wrong_keys(self):
-        s = Square(10, 10, 10, 10)
-        s.update(size=5, id=89, a=1, b=54)
-        self.assertEqual("[Square] (89) 10/10 - 5", str(s))
-
+	def test_update_kwargs_some_wrong_keys(self):
+		s = Square(10, 10, 10, 10)
+		s.update(size=5, id=89, a=1, b=54)
+		self.assertEqual("[Square] (89) 10/10 - 5", str(s))
+      
 
 class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Square class."""
